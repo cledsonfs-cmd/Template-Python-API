@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: Flask-REST-JSONAPI
+Version: 0.31.2
+Summary: Flask extension to create REST web api according to JSONAPI 1.0 specification with Flask, Marshmallow                  and data provider of your choice (SQLAlchemy, MongoDB, ...)
+Home-page: https://github.com/miLibris/flask-rest-jsonapi
+Author: miLibris API Team
+Author-email: pf@milibris.net
+License: MIT
+Keywords: web api rest jsonapi flask sqlalchemy marshmallow
+Platform: any
+Classifier: Framework :: Flask
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: six
+Requires-Dist: Flask (>=0.11)
+Requires-Dist: marshmallow (>=3.8.0)
+Requires-Dist: marshmallow-jsonapi (>=0.23.2)
+Requires-Dist: sqlalchemy
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: coveralls ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+
+UNKNOWN
+
+

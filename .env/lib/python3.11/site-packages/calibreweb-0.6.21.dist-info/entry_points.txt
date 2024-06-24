@@ -1,0 +1,2 @@
+[console_scripts]
+cps = calibreweb:main

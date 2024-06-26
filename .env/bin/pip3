@@ -1,4 +1,4 @@
-#!/home/cledson/Templates/Template-Python-API/.env/bin/python
+#!/home/cledson/Templates/Template-Python-API/.env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

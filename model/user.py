@@ -1,9 +1,10 @@
 
 class User(object):
-  def __init__(self, id ,email, password, status, role):
-    self.id = id
-    self.email = email
-    self.password = password
-    self.status = status
-    self.role = role
+  def __init__(self):
+    self.id = ""
+    self.email = ""
+    self.password = ""
+    self.status = ""
+    self.role = ""
+    
     

@@ -34,8 +34,7 @@ http://localhost:5000/docs
 ## Docker
 
 ```bash
-# composer
-$ docker composer up -d
+$ docker compose up -d
 ```
 ## Stay in touch
 

@@ -1,5 +1,20 @@
-FROM python:3.10.14-alpine3.20
-ADD . /code
+FROM python:3
+
+RUN mkdir /code
 WORKDIR /code
-RUN pip install -r requirements.txt
-CMD python app.py
+
+COPY requirements.txt .
+
+#RUN pip install --upgrade pip
+
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+# Define as variáveis de ambiente HOST e PORT
+ENV HOST=0.0.0.0
+ENV PORT=5000
+
+EXPOSE 5000
+
+CMD [ "python3", "run.py" ]

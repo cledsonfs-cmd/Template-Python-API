@@ -1,16 +1,25 @@
-web:
-  build: .
-  ports:
-    - "5000:5000"
-  volumes:
-    - .:/code
-  links:
-    - redis
-  environment:
-    - PORT_REDIS=6379
-    - HOST_REDIS=redis
+version: "3"
 
-redis:
-  image: redis
-  volumes:
-    - dados_redis:/data
+networks:
+  template-net:
+    driver: bridge
+    name: template-net
+  db-postgresql-net:
+    name: db-postgresql-net
+    driver: bridge
+
+services:
+  python-api:
+    container_name: "python-api"
+    image: templates.local:5000/python-api
+  app:
+    networks:
+      - template-net
+      - db-postgresql-net
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=5000

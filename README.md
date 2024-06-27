@@ -27,10 +27,8 @@ $ pip install -r requirements.txt
 # run
 $ python3 run.py
 ```
-```bash
-# access
-http://localhost:5000/docs
-```
+### Documentation
+* Swagger (development environment): [http://localhost:5000/docs](http://localhost:5000/docs)
 ## Docker
 
 ```bash

@@ -1,25 +1,12 @@
-version: "3"
-
-networks:
-  template-net:
-    driver: bridge
-    name: template-net
-  db-postgresql-net:
-    name: db-postgresql-net
-    driver: bridge
+version: '3.9'
 
 services:
   python-api:
     container_name: "python-api"
-    image: templates.local:5000/python-api
-  app:
-    networks:
-      - template-net
-      - db-postgresql-net
-    build:
-      context: .
+    image: templates.local:8000/python-api
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
     ports:
-      - "5000:5000"
-    environment:
-      - HOST=0.0.0.0
-      - PORT=5000
+      - "8000:8000"

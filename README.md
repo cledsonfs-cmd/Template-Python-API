@@ -6,6 +6,13 @@
 
 [Template-Python-API](https://github.com/cledsonfs-cmd/Template-Python-API): Template para o desenvolvimento de APIs com base na linguagem Python.
 
+## Technologies used
+- [Python 3.11](https://www.python.org/)
+- [Django REST framework 3.15](https://www.django-rest-framework.org/tutorial/quickstart/)
+- [dj-rest-auth 6](https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+- [django-allauth 0.66](https://docs.allauth.org/en/latest/installation/quickstart.html)
+
+
 ## Installation
 
 ```bash
@@ -25,15 +32,16 @@ $ pip install -r requirements.txt
 
 ```bash
 # run
-$ python3 run.py
+$ python3 manage.py runserver
 ```
 ### Documentation
-* Swagger (development environment): [http://localhost:5000/docs](http://localhost:5000/docs)
+* Swagger (development environment): [http://localhost:8000/docs](http://localhost:5000/docs)
 ## Docker
 
 ```bash
-$ docker compose up -d
+$ docker compose up -d --build
 ```
+
 ## Stay in touch
 
 - Author - [Cledson Francisco Silva](https://www.linkedin.com/in/cledson-francisco-silva-32737a2a/)

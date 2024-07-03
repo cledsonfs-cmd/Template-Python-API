@@ -1,20 +1,15 @@
-FROM python:3
+# Use the official Python base image
+FROM python:3.11
 
-RUN mkdir /code
-WORKDIR /code
+# Set the working directory
+WORKDIR /app
 
+# Install dependencies
 COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-#RUN pip install --upgrade pip
-
-RUN pip3 install -r requirements.txt
-
+# Copy the application code
 COPY . .
 
-# Define as variáveis de ambiente HOST e PORT
-ENV HOST=0.0.0.0
-ENV PORT=5000
-
-EXPOSE 5000
-
-CMD [ "python3", "run.py" ]
+# Expose the port the app will run on
+EXPOSE 8000

@@ -13,6 +13,6 @@ class DetailUserViewSet(ModelViewSet):
     serializer_class = DetailUserSerializer
     filter_backends = [SearchFilter]
     search_fields = ['observacao']
-    # permission_classes = (DjangoModelPermissions,)
-    # authentication_classes = (TokenAuthentication,)
+    permission_classes = (DjangoModelPermissions,)
+    authentication_classes = (TokenAuthentication,)
 

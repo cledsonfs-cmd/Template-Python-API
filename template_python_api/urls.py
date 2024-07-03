@@ -35,6 +35,7 @@ urlpatterns = [
     path("", include(router.urls)),
     path("admin/", admin.site.urls),
     path("api-token-auth/", obtain_auth_token, name='api_token_auth'),
-    path('dj-rest-auth/', include('dj_rest_auth.urls')),
-    path('accounts/', include('allauth.urls')),
+    #path("api-auth/", include("rest_framework.urls")),
+    #path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    #path('accounts/', include('allauth.urls')),
 ]

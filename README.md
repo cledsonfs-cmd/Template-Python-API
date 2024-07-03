@@ -35,7 +35,10 @@ $ pip install -r requirements.txt
 $ python3 manage.py runserver
 ```
 ### Documentation
-* Swagger (development environment): [http://localhost:8000/docs](http://localhost:5000/docs)
+- Django REST framework: [http://http://127.0.0.1:8000/](http://localhost:5000/docs)
+- Django Admin: [http://http://127.0.0.1:8000/admin](http://localhost:5000/docs)
+  * User: admin
+  * Password: admin123456
 ## Docker
 
 ```bash

@@ -39,6 +39,9 @@ $ python3 manage.py runserver
 - Django Admin: [http://http://127.0.0.1:8000/admin](http://localhost:5000/docs)
   * User: admin
   * Password: admin123456
+- Accounts[http://127.0.0.1:8000/accounts/](http://127.0.0.1:8000/accounts/)
+  * User: admin
+  * Password: admin123456
 ## Docker
 
 ```bash

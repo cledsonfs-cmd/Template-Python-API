@@ -1,0 +1,26 @@
+python3 -m venv .env
+source .env/bin/activate
+pip install --upgrade pip
+pip install django
+django-admin startproject template_python_api .
+
+RUN
+	- PYTHON3 manage.py migrate
+
+python3 manage.py createsuperuser
+pip install djangorestframework
+python3 manage.py startapp core
+
+
+
+(https://dj-rest-auth.readthedocs.io/en/latest/installation.html)
+pip install dj-rest-auth
+
+(https://docs.allauth.org/en/latest/installation/quickstart.html
+pip install django-allauth
+
+
+
+pip3 freeze > requirements.txt 
+
+

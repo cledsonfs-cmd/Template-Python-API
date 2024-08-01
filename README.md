@@ -41,10 +41,9 @@ $ python3 manage.py migrate
 $ python3 manage.py runserver
 ```
 ### Documentation
-- Django REST framework: [http://http://127.0.0.1:8000/](http://localhost:8000)
-- Django Admin: [http://http://127.0.0.1:8000/admin](http://localhost:8000/admin)
-  * User: admn
-  * Password: admn123456
+- Swagger (development environment): [http://localhost:8000/swagger/](http://localhost:8000/swagger/)
+  * User: adm
+  * Password: adm123456
 ## Docker
 
 ```bash

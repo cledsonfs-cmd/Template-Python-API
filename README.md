@@ -27,6 +27,12 @@ $ source env/bin/activate
 ```bash
 $ pip install -r requirements.txt
 ```
+```bash
+$ python3 manage.py makemigrations
+```
+```bash
+$ python3 manage.py migrate
+```
 
 ## Running the app
 
@@ -35,13 +41,10 @@ $ pip install -r requirements.txt
 $ python3 manage.py runserver
 ```
 ### Documentation
-- Django REST framework: [http://http://127.0.0.1:8000/](http://localhost:5000/docs)
-- Django Admin: [http://http://127.0.0.1:8000/admin](http://localhost:5000/docs)
-  * User: admin
-  * Password: admin123456
-- Accounts[http://127.0.0.1:8000/accounts/](http://127.0.0.1:8000/accounts/)
-  * User: admin
-  * Password: admin123456
+- Django REST framework: [http://http://127.0.0.1:8000/](http://localhost:8000)
+- Django Admin: [http://http://127.0.0.1:8000/admin](http://localhost:8000/admin)
+  * User: admn
+  * Password: admn123456
 ## Docker
 
 ```bash

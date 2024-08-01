@@ -18,11 +18,17 @@ import dj_rest_auth
 from allauth.headless.account.views import VerifyEmailView
 
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from rest_framework import routers
-from core.api.viewsets import DetailUserViewSet
-from rest_framework.authtoken.views import obtain_auth_token
 
+from core import views
+from core.api.viewsets import DetailUserViewSet
+from core.auth.login import auth_login
+from core.auth.logout import auth_logout
+from core.auth.refresh import auth_refresh
+from core.auth.register import auth_register
+from core.auth.users import auth_users
 from roles.api.viewsets import RoleViewSet
 from status.api.viewsets import StatusViewSet
 
@@ -34,8 +40,11 @@ router.register(r'status', StatusViewSet)
 urlpatterns = [
     path("", include(router.urls)),
     path("admin/", admin.site.urls),
-    path("api-token-auth/", obtain_auth_token, name='api_token_auth'),
-    path("api-auth/", include("rest_framework.urls")),
-    path('dj-rest-auth/', include('dj_rest_auth.urls')),
-    path('accounts/', include('allauth.urls')),
+
+    path("api/login", auth_login),
+    path("api/logout", auth_logout),
+    path("api/refresh", auth_refresh),
+    path("api/users", auth_users),
+    path("api/register", auth_register),
+
 ]

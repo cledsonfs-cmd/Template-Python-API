@@ -19,8 +19,6 @@ pip install dj-rest-auth
 (https://docs.allauth.org/en/latest/installation/quickstart.html
 pip install django-allauth
 
-
-
-pip3 freeze > requirements.txt 
+pip3 freeze > requirements.txt
 
 
